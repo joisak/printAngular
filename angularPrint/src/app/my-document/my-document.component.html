@@ -1,3 +1,4 @@
-<div class="document" *ngFor="let document of documentsId">
+<div class="document" *ngFor="let document of documentsId; let i = index">
     <h1>Invoice Num. {{ document }}</h1>
+    Amount: {{ (documentDetails[i] | async)?.amount }}
   </div>
